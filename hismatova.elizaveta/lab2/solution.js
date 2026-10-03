@@ -1,14 +1,12 @@
 function hexToRgb(hexColor) {
   if (typeof hexColor !== 'string') {
-    throw new Error("Hex color should be a string");
+    throw new Error('Hex color should be a string');
   }
   if (hexColor.length !== 7) {
-    throw new RangeError(
-      "Hex color should contain 7 symbols",
-    );
+    throw new RangeError('Hex color should contain 7 symbols');
   }
   if (hexColor[0] !== '#') {
-    throw new Error("Hex color should start with #");
+    throw new Error('Hex color should start with #');
   }
   const red = parseInt(hexColor[1] + hexColor[2], 16);
   if (isNaN(red)) {
@@ -25,4 +23,4 @@ function hexToRgb(hexColor) {
   return `rgb(${red}, ${green}, ${blue})`;
 }
 
-export { hexToRgb };
+export {hexToRgb};
